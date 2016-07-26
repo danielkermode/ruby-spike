@@ -1,0 +1,69 @@
+1. What is Ruby? What is Rails? Talk about philosophy, show quirks.rb and quote.
+
+2. Run through code in quirks.rb. Play in IRB.
+
+3. What is Rails in relation to Ruby? Giant framework, MVC focussed.
+Created by David Heinemeier Hansson while he was working at Basecamp.
+
+There is also a large community with a philosophy surrounding rails.
+
+From rubyonrails.org/doctrine:
+
+-Optimize for programmer happiness
+-Convention over Configuration
+-No one paradigm
+-Exalt beautiful code
+-Progress over stability
+-Provide sharp knives (cutting up the language, Ruby provides this, but Rails also aspires to it. Give the programmer freedom).
+-Value integrated systems
+-Push up a big tent. Controversy is good! Rails tries to open up to a range of ideologies.
+-Eg. DHH is against TDD and Rspec, but both have been wildly popular in Rails. Contrasts with Convention over Configuration.
+
+DHH was bored until the day he met Ruby, and then his life changed forever. He was developing in PHP and Java, but always looking for something else.
+
+"Ruby has just a deep emotional appeal of how beautiful you can write something." Good programming, like good writing, is concise, and with Ruby, you can express an operation in one line that would take up to 10 lines in Java. Even someone who doesn't understand the code can look at a line of Ruby and see that it is more elegant than Java, just like a non-native speaker knows French is prettier than German.
+-DHH
+
+Ruby is the basic language, whereas Rails is a genre or form that the language can take, like a thriller, DHH explains.
+
+Rails lowers the amount of technical expertise necessary to create web applications.
+
+Some sites built with Ruby on Rails:
+
+-Shopify
+-Bloomberg
+-AirBnB
+-SoundCloud
+-Heroku
+-Hulu
+-Github
+-Twitch
+-Imgur
+
+-Twitter
+Refactored parts to Scala (runs on JVM), and Java. Use of Ruby is shrinking. Twitter Help Center appears to still be RoR.
+It's not that Rails doesn't scale, but rather, requests for "live" data in Ruby (or any interpreted language) do not scale, as they are comparatively far more expensive both in terms of CPU & memory utilization than their compiled language counterparts. Scala is now used for backend services. Most businesses won't have the same concerns as Twitter.
+
+4. Demo of users app I made with RoR.
+
+5. Demonstration of file structure and explain Gems. Touch on dependencies used. Mention active record and action cable.
+Active Record is an ORM (Object Relational Mapping) and is the M in MVC. Similar to Knex for node. sqlite3 for dev and pg for prod.
+Naming conventions for tables:
+Users - users
+UserPosts - user_posts
+Can override but convention prevails.
+
+6. Jump into rails console and demo creating, authing, and saving a new user. With and without --sandbox.
+
+7. Show database with sqlite3, talk about encryption.
+
+8. Show rails code, mention generating with rails scaffold and rails generate.
+
+9. Show erb files, compare with handlebars, mention that React can be used on the frontend. react-rails gem.
+Show application js with require files. Helper method react_component. Standard for rails is to use coffeescript for javascript
+Mention coffeescript transpiling to javascript, compare with es6.
+
+10. Rspec, show failing tests, flynn helped me. Mention that these were scaffolded.
+
+11. My experience with rails, I think it's good for creating a standard workflow, for RESTful apps with a large team, however for a personal project probably wouldn't use.
+It's not the right fit for everything, and may not scale depending on what you are doing. Philosophy has proven to be extremely successful, Rails definitely gets something right.
